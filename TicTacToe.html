@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="TicTacToe.css"></link>
+        <title>Tic Tac Toe</title>
+        <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <img id="tttgrid" src="image/tictactoe.png"/>
+        <h1 id="title">Tic Tac Toe</h1>      
+        <p id="instructions">Please choose X or O to start the game.</p>
+        <span id="comment"></span>
+        <button id="xButton" onclick="chooseX()">X</button>
+        <button id="oButton" onclick="chooseO()">O</button>
+
+        <div id="grid"></div>
+            <input type="text" class="boxes" id="grid1" onclick=
+                "play1(); results();" readonly>
+
+            <input type="text" class="boxes" id="grid2" onclick=
+                "play2(); results();" readonly>
+
+            <input type="text" class="boxes" id="grid3" onclick=
+                "play3(); results();" readonly>
+            <br><br>
+
+            <input type="text" class="boxes" id="grid4" onclick=
+                "play4(); results();" readonly>
+                
+            <input type="text" class="boxes" id="grid5" onclick=
+                "play5(); results();" readonly>
+
+            <input type="text" class="boxes" id="grid6" onclick=
+                "play6(); results();" readonly>
+            <br><br>
+
+            <input type="text" class="boxes" id="grid7" onclick=
+                "play7(); results();" readonly>
+
+            <input type="text" class="boxes" id="grid8" onclick=
+                "play8(); results();" readonly>
+
+            <input type="text" class="boxes" id="grid9" onclick=
+                "play9(); results();" readonly>
+        </div>
+
+        <p><button id="resetButton" onclick="reset()">Reset Game</button></p>
+        <p><button class="hidden" id="movesButton" onclick="showHistory()">Show moves history</button></p>
+
+        <img class="hidden" id="tttgrid2" src="image/photo2.png"/>
+
+        <div id="grid2"></div>
+            <input type="text" class="hidden boxes1" id="grid21" readonly>
+
+            <input type="text" class="hidden boxes1" id="grid22" readonly>
+
+            <input type="text" class="hidden boxes1" id="grid23" readonly>
+            <br><br>
+
+            <input type="text" class="hidden boxes1" id="grid24" readonly>
+                
+            <input type="text" class="hidden boxes1" id="grid25" readonly>
+
+            <input type="text" class="hidden boxes1" id="grid26" readonly>
+            <br><br>
+
+            <input type="text" class="hidden boxes1" id="grid27" readonly>
+
+            <input type="text" class="hidden boxes1" id="grid28" readonly>
+
+            <input type="text" class="hidden boxes1" id="grid29" readonly>
+        </div>
+        
+        <button class="hidden" id="prevButton" onclick="previous()">Previous</button>
+        <button class="hidden" id="nextButton" onclick="next()">Next</button>
+
+        
+
+        <script src="TicTacToe.js"></script>
+
+    </body>
+</html>

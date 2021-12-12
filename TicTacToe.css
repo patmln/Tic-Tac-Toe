@@ -1,0 +1,273 @@
+body {
+    background-image: url("https://wallpaperaccess.com/full/4317845.jpg");
+    font-family: 'Schoolbell';
+}
+
+#tttgrid {
+    position: absolute;
+    top: 31%;
+    left: 28%;
+    width: 50%;
+    height: 50%
+}
+
+#title {
+    text-align: center;
+    font-size: 60px;
+}
+
+#instructions {
+    text-align: center;
+    font-size: 23px;
+}
+
+#comment {
+    position: absolute;
+    top: 18%;
+    left: 45%;
+    text-align: center;
+    font-size: 23px;
+}
+
+#xButton {
+    position: absolute;
+    top: 24%;
+    left: 47%;
+    font-family: 'Schoolbell';
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 6px;
+}
+
+#oButton {
+    position: absolute;
+    top: 24%;
+    left: 51%;
+    font-family: 'Schoolbell';
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 6px;
+}
+
+.boxes {
+    width: 120px;
+    height: 80px;
+    margin: auto;
+    border: none;
+    background-color: transparent;
+    border-radius: 6px;
+    font-size: 70px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#grid1 {
+    position: absolute;
+    top: 35%;
+    left: 33%;
+    font-family: 'Schoolbell';
+    color: black;
+}
+
+#grid2 {
+    position: absolute;
+    top: 35%;
+    left: 48%;
+    font-family: 'Schoolbell';
+    color: black;
+}
+
+#grid3 {
+    position: absolute;
+    top: 35%;
+    left: 62%;
+    font-family: 'Schoolbell';
+    color: black;
+}
+
+#grid4 {
+    position: absolute;
+    top: 51%;
+    left: 33%;
+    font-family: 'Schoolbell';
+    color: black;
+}
+
+#grid5 {
+    position: absolute;
+    top: 51%;
+    left: 48%;
+    font-family: 'Schoolbell';
+    color: black;
+}
+
+#grid6 {
+    position: absolute;
+    top: 51%;
+    left: 62%;
+    font-family: 'Schoolbell';
+    color: black;
+}
+
+#grid7 {
+    position: absolute;
+    top: 67%;
+    left: 33%;
+    font-family: 'Schoolbell';
+    color: black;
+}
+
+#grid8 {
+    position: absolute;
+    top: 67%;
+    left: 48%;
+    font-family: 'Schoolbell';
+    color: black;
+}
+
+#grid9 {
+    position: absolute;
+    top: 67%;
+    left: 62%;
+    font-family: 'Schoolbell';
+    color: black;
+}
+
+.boxes:hover {
+    background-color: rgba(179, 179, 179, 0.425);
+}
+
+#resetButton {
+    position: absolute;
+    top: 87%;
+    left: 47.2%;
+    font-family: 'Schoolbell';
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 6px;
+}
+
+#movesButton {
+    position: absolute;
+    top: 92%;
+    left: 45.5%;
+    font-family: 'Schoolbell';
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 6px;
+}
+
+#tttgrid2 {
+    position: absolute;
+    top: 7%;
+    right: 0%;
+    width: 25%;
+    height: 25%
+}
+
+.boxes1 {
+    width: 60px;
+    height: 40px;
+    margin: auto;
+    border: none;
+    background-color: transparent;
+    border-radius: 6px;
+    font-size: 30px;
+    text-align: center;
+}
+
+#grid21 {
+    position: absolute;
+    top: 9%;
+    right: 17%;
+    font-family: 'Schoolbell';
+    color: black;
+}
+
+#grid22 {
+    position: absolute;
+    top: 9%;
+    right: 12%;
+    font-family: 'Schoolbell';
+    color: black;
+}
+
+#grid23 {
+    position: absolute;
+    top: 9%;
+    right: 6%;
+    font-family: 'Schoolbell';
+    color: black;
+}
+
+#grid24 {
+    position: absolute;
+    top: 15.5%;
+    right: 17%;
+    font-family: 'Schoolbell';
+    color: black;
+}
+
+#grid25 {
+    position: absolute;
+    top: 15.5%;
+    right: 12%;
+    font-family: 'Schoolbell';
+    color: black;
+}
+
+#grid26 {
+    position: absolute;
+    top: 15.5%;
+    right: 6%;
+    font-family: 'Schoolbell';
+    color: black;
+}
+
+#grid27 {
+    position: absolute;
+    top: 22%;
+    right: 17%;
+    font-family: 'Schoolbell';
+    color: black;
+}
+
+#grid28 {
+    position: absolute;
+    top: 22%;
+    right: 12%;
+    font-family: 'Schoolbell';
+    color: black;
+}
+
+#grid29 {
+    position: absolute;
+    top: 22%;
+    right: 6%;
+    font-family: 'Schoolbell';
+    color: black;
+}
+
+#prevButton {
+    position: absolute;
+    top: 34%;
+    right: 14%;
+    font-family: 'Schoolbell';
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 6px;
+}
+
+#nextButton {
+    position: absolute;
+    top: 34%;
+    right: 9%;
+    font-family: 'Schoolbell';
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 6px;
+}
+
+.hidden {
+    visibility: hidden;
+}
