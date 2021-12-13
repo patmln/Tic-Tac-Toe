@@ -1,21 +1,11 @@
-var grid = document.querySelector("#grid");
-var gridTwo = document.querySelector("#grid2");
+var grid = document.querySelectorAll(".grid")
+
 
 var board = [
     ['', '', ''],
     ['', '', ''],
     ['', '', '']
 ]
-
-var grid1 = document.querySelector("#grid1");
-var grid2 = document.querySelector("#grid2");
-var grid3 = document.querySelector("#grid3");
-var grid4 = document.querySelector("#grid4");
-var grid5 = document.querySelector("#grid5");
-var grid6 = document.querySelector("#grid6");
-var grid7 = document.querySelector("#grid7");
-var grid8 = document.querySelector("#grid8");
-var grid9 = document.querySelector("#grid9");
 
 var gameHistory = [[
     ['', '', ''],
@@ -42,15 +32,7 @@ const oButton = document.querySelector('#oButton');
 var value = null;
 
 if (value == null) {
-    grid1.disabled = true;
-    grid2.disabled = true;
-    grid3.disabled = true;
-    grid4.disabled = true;
-    grid5.disabled = true;
-    grid6.disabled = true;
-    grid7.disabled = true;
-    grid8.disabled = true;
-    grid9.disabled = true;
+    grid.disabled = true;
 }
 
 function chooseX() {
@@ -59,15 +41,7 @@ function chooseX() {
     oButton.style.visibility = "hidden";
     comment.innerText = "Player X's turn."
     value = 1;
-    grid1.disabled = false;
-    grid2.disabled = false;
-    grid3.disabled = false;
-    grid4.disabled = false;
-    grid5.disabled = false;
-    grid6.disabled = false;
-    grid7.disabled = false;
-    grid8.disabled = false;
-    grid9.disabled = false;
+    grid.disabled = false;
 }
 
 function chooseO() {
@@ -76,23 +50,15 @@ function chooseO() {
     oButton.style.visibility = "hidden";
     comment.innerText = "Player O's turn."
     value = 2;
-    grid1.disabled = false;
-    grid2.disabled = false;
-    grid3.disabled = false;
-    grid4.disabled = false;
-    grid5.disabled = false;
-    grid6.disabled = false;
-    grid7.disabled = false;
-    grid8.disabled = false;
-    grid9.disabled = false;
+    grid.disabled = false;
 }
 
 //game play
 function play1() {
     if (value == 1) {
         board[0][0] = "X";
-        grid1.value = board[0][0];
-        grid1.disabled = true;
+        grid[0].value = board[0][0];
+        grid[0].disabled = true;
         comment.innerText = "Player O's turn."
         value = 2;
         var board1 = JSON.parse(JSON.stringify(board));
@@ -100,8 +66,8 @@ function play1() {
     }
     else {
         board[0][0] = "O";
-        grid1.value = board[0][0];
-        grid1.disabled = true;
+        grid[0].value = board[0][0];
+        grid[0].disabled = true;
         comment.innerText = "Player X's turn."
         value = 1;
         var board1 = JSON.parse(JSON.stringify(board));
@@ -112,8 +78,8 @@ function play1() {
 function play2() {
     if (value == 1) {
         board[0][1] = "X";
-        grid2.value = board[0][1];
-        grid2.disabled = true;
+        grid[1].value = board[0][1];
+        grid[1].disabled = true;
         comment.innerText = "Player O's turn."
         value = 2;
         var board2 = JSON.parse(JSON.stringify(board));
@@ -121,8 +87,8 @@ function play2() {
     }
     else {
         board[0][1] = "O";
-        grid2.value = board[0][1];
-        grid2.disabled = true;
+        grid[1].value = board[0][1];
+        grid[1].disabled = true;
         comment.innerText = "Player X's turn."
         value = 1;
         var board2 = JSON.parse(JSON.stringify(board));
@@ -133,8 +99,8 @@ function play2() {
 function play3() {
     if (value == 1) {
         board[0][2] = "X";
-        grid3.value = board[0][2];
-        grid3.disabled = true;
+        grid[2].value = board[0][2];
+        grid[2].disabled = true;
         comment.innerText = "Player O's turn."
         value = 2;
         var board3 = JSON.parse(JSON.stringify(board));
@@ -142,8 +108,8 @@ function play3() {
     }
     else {
         board[0][2] = "O";
-        grid3.value = board[0][2];
-        grid3.disabled = true;
+        grid[2].value = board[0][2];
+        grid[2].disabled = true;
         comment.innerText = "Player X's turn."
         value = 1;
         var board3 = JSON.parse(JSON.stringify(board));
@@ -154,8 +120,8 @@ function play3() {
 function play4() {
     if (value == 1) {
         board[1][0] = "X";
-        grid4.value = board[1][0];
-        grid4.disabled = true;
+        grid[3].value = board[1][0];
+        grid[3].disabled = true;
         comment.innerText = "Player O's turn."
         value = 2;
         var board4 = JSON.parse(JSON.stringify(board));
@@ -163,8 +129,8 @@ function play4() {
     }
     else {
         board[1][0] = "O";
-        grid4.value = board[1][0];
-        grid4.disabled = true;
+        grid[3].value = board[1][0];
+        grid[3].disabled = true;
         comment.innerText = "Player X's turn."
         value = 1;
         var board4 = JSON.parse(JSON.stringify(board));
@@ -175,8 +141,8 @@ function play4() {
 function play5() {
     if (value == 1) {
         board[1][1] = "X";
-        grid5.value = board[1][1];
-        grid5.disabled = true;
+        grid[4].value = board[1][1];
+        grid[4].disabled = true;
         comment.innerText = "Player O's turn."
         value = 2;
         var board5 = JSON.parse(JSON.stringify(board));
@@ -184,8 +150,8 @@ function play5() {
     }
     else {
         board[1][1] = "O";
-        grid5.value = board[1][1];
-        grid5.disabled = true;
+        grid[4].value = board[1][1];
+        grid[4].disabled = true;
         comment.innerText = "Player X's turn."
         value = 1;
         var board5 = JSON.parse(JSON.stringify(board));
@@ -196,8 +162,8 @@ function play5() {
 function play6() {
     if (value == 1) {
         board[1][2] = "X";
-        grid6.value = board[1][2];
-        grid6.disabled = true;
+        grid[5].value = board[1][2];
+        grid[5].disabled = true;
         comment.innerText = "Player O's turn."
         value = 2;
         var board6 = JSON.parse(JSON.stringify(board));
@@ -205,8 +171,8 @@ function play6() {
     }
     else {
         board[1][2] = "O";
-        grid6.value = board[1][2];
-        grid6.disabled = true;
+        grid[5].value = board[1][2];
+        grid[5].disabled = true;
         comment.innerText = "Player X's turn."
         value = 1;
         var board6 = JSON.parse(JSON.stringify(board));
@@ -217,8 +183,8 @@ function play6() {
 function play7() {
     if (value == 1) {
         board[2][0] = "X";
-        grid7.value = board[2][0];
-        grid7.disabled = true;
+        grid[6].value = board[2][0];
+        grid[6].disabled = true;
         comment.innerText = "Player O's turn."
         value = 2;
         var board7 = JSON.parse(JSON.stringify(board));
@@ -226,8 +192,8 @@ function play7() {
     }
     else {
         board[2][0] = "O";
-        grid7.value = board[2][0];
-        grid7.disabled = true;
+        grid[6].value = board[2][0];
+        grid[6].disabled = true;
         comment.innerText = "Player X's turn."
         value = 1;
         var board7 = JSON.parse(JSON.stringify(board));
@@ -238,8 +204,8 @@ function play7() {
 function play8() {
     if (value == 1) {
         board[2][1] = "X";
-        grid8.value = board[2][1];
-        grid8.disabled = true;
+        grid[7].value = board[2][1];
+        grid[7].disabled = true;
         comment.innerText = "Player O's turn."
         value = 2;
         var board8 = JSON.parse(JSON.stringify(board));
@@ -247,8 +213,8 @@ function play8() {
     }
     else {
         board[2][1] = "O";
-        grid8.value = board[2][1];
-        grid8.disabled = true;
+        grid[7].value = board[2][1];
+        grid[7].disabled = true;
         comment.innerText = "Player X's turn."
         value = 1;
         var board8 = JSON.parse(JSON.stringify(board));
@@ -259,8 +225,8 @@ function play8() {
 function play9() {
     if (value == 1) {
         board[2][2] = "X";
-        grid9.value = board[2][2];
-        grid9.disabled = true;
+        grid[8].value = board[2][2];
+        grid[8].disabled = true;
         comment.innerText = "Player O's turn."
         value = 2;
         var board9 = JSON.parse(JSON.stringify(board));
@@ -268,8 +234,8 @@ function play9() {
     }
     else {
         board[2][2] = "O";
-        grid9.value = board[2][2];
-        grid9.disabled = true;
+        grid[8].value = board[2][2];
+        grid[8].disabled = true;
         comment.innerText = "Player X's turn."
         value = 1;
         var board9 = JSON.parse(JSON.stringify(board));
@@ -285,211 +251,211 @@ const hidden = "hidden"
 function results() {
     //X is winnner
     if (board[0][0] == "X" && board[0][1] == "X" && board[0][2] == "X") {
-        grid1.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid2.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid3.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid4.disabled = true;
-        grid5.disabled = true;
-        grid6.disabled = true;
-        grid7.disabled = true;
-        grid8.disabled = true;
-        grid9.disabled = true;
+        grid[0].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[1].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[2].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[3].disabled = true;
+        grid[4].disabled = true;
+        grid[5].disabled = true;
+        grid[6].disabled = true;
+        grid[7].disabled = true;
+        grid[8].disabled = true;
         comment.innerText = "Player X won!";
         movesButton.classList.remove(hidden)
     }
     else if (board[1][0] == "X" && board[1][1] == "X" && board[1][2] == "X") {
-        grid4.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid5.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid6.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid1.disabled = true;
-        grid2.disabled = true;
-        grid3.disabled = true;
-        grid7.disabled = true;
-        grid8.disabled = true;
-        grid9.disabled = true;
+        grid[3].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[4].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[5].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[0].disabled = true;
+        grid[1].disabled = true;
+        grid[2].disabled = true;
+        grid[6].disabled = true;
+        grid[7].disabled = true;
+        grid[8].disabled = true;
         comment.innerText = "Player X won!";
         movesButton.classList.remove(hidden)
     }
     else if (board[2][0] == "X" && board[2][1] == "X" && board[2][2] == "X") {
-        grid7.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid8.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid9.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid1.disabled = true;
-        grid2.disabled = true;
-        grid3.disabled = true;
-        grid4.disabled = true;
-        grid5.disabled = true;
-        grid6.disabled = true;
+        grid[6].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[7].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[8].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[0].disabled = true;
+        grid[1].disabled = true;
+        grid[2].disabled = true;
+        grid[3].disabled = true;
+        grid[4].disabled = true;
+        grid[5].disabled = true;
         comment.innerText = "Player X won!";
         movesButton.classList.remove(hidden)
     }
     else if (board[0][0] == "X" && board[1][0] == "X" && board[2][0] == "X") {
-        grid1.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid4.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid7.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid2.disabled = true;
-        grid3.disabled = true;
-        grid5.disabled = true;
-        grid6.disabled = true;
-        grid8.disabled = true;
-        grid9.disabled = true;
+        grid[0].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[3].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[6].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[1].disabled = true;
+        grid[2].disabled = true;
+        grid[4].disabled = true;
+        grid[5].disabled = true;
+        grid[7].disabled = true;
+        grid[8].disabled = true;
         comment.innerText = "Player X won!";
         movesButton.classList.remove(hidden)
     }
     else if (board[0][1] == "X" && board[1][1] == "X" && board[2][1] == "X") {
-        grid2.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid5.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid8.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid1.disabled = true;
-        grid3.disabled = true;
-        grid4.disabled = true;
-        grid6.disabled = true;
-        grid7.disabled = true;
-        grid9.disabled = true;
+        grid[1].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[4].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[7].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[0].disabled = true;
+        grid[2].disabled = true;
+        grid[3].disabled = true;
+        grid[5].disabled = true;
+        grid[6].disabled = true;
+        grid[8].disabled = true;
         comment.innerText = "Player X won!";
         movesButton.classList.remove(hidden)
     }
     else if (board[0][2] == "X" && board[1][2] == "X" && board[2][2] == "X") {
-        grid3.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid6.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid9.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid1.disabled = true;
-        grid2.disabled = true;
-        grid4.disabled = true;
-        grid5.disabled = true;
-        grid7.disabled = true;
-        grid8.disabled = true;
+        grid[2].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[5].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[8].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[0].disabled = true;
+        grid[1].disabled = true;
+        grid[3].disabled = true;
+        grid[4].disabled = true;
+        grid[6].disabled = true;
+        grid[7].disabled = true;
         comment.innerText = "Player X won!";
         movesButton.classList.remove(hidden)
     }
     else if (board[0][0] == "X" && board[1][1] == "X" && board[2][2] == "X") {
-        grid1.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid5.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid9.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid2.disabled = true;
-        grid3.disabled = true;
-        grid4.disabled = true;
-        grid6.disabled = true;
-        grid7.disabled = true;
-        grid8.disabled = true;
+        grid[0].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[4].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[8].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[1].disabled = true;
+        grid[2].disabled = true;
+        grid[3].disabled = true;
+        grid[5].disabled = true;
+        grid[6].disabled = true;
+        grid[7].disabled = true;
         comment.innerText = "Player X won!";
         movesButton.classList.remove(hidden)
     }
     else if (board[0][2] == "X" && board[1][1] == "X" && board[2][0] == "X") {
-        grid3.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid5.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid7.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid1.disabled = true;
-        grid2.disabled = true;
-        grid4.disabled = true;
-        grid6.disabled = true;
-        grid8.disabled = true;
-        grid9.disabled = true;
+        grid[2].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[4].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[6].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[0].disabled = true;
+        grid[1].disabled = true;
+        grid[3].disabled = true;
+        grid[5].disabled = true;
+        grid[7].disabled = true;
+        grid[8].disabled = true;
         comment.innerText = "Player X won!";
         movesButton.classList.remove(hidden)
     }
     //O is winnner
     else if (board[0][0] == "O" && board[0][1] == "O" && board[0][2] == "O") {
-        grid1.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid2.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid3.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid4.disabled = true;
-        grid5.disabled = true;
-        grid6.disabled = true;
-        grid7.disabled = true;
-        grid8.disabled = true;
-        grid9.disabled = true;
+        grid[0].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[1].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[2].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[3].disabled = true;
+        grid[4].disabled = true;
+        grid[5].disabled = true;
+        grid[6].disabled = true;
+        grid[7].disabled = true;
+        grid[8].disabled = true;
         comment.innerText = "Player O won!";
         movesButton.classList.remove(hidden)
     }
     else if (board[1][0] == "O" && board[1][1] == "O" && board[1][2] == "O") {
-        grid4.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid5.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid6.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid1.disabled = true;
-        grid2.disabled = true;
-        grid3.disabled = true;
-        grid7.disabled = true;
-        grid8.disabled = true;
-        grid9.disabled = true;
+        grid[3].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[4].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[5].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[0].disabled = true;
+        grid[1].disabled = true;
+        grid[2].disabled = true;
+        grid[6].disabled = true;
+        grid[7].disabled = true;
+        grid[8].disabled = true;
         comment.innerText = "Player O won!";
         movesButton.classList.remove(hidden)
     }
     else if (board[2][0] == "O" && board[2][1] == "O" && board[2][2] == "O") {
-        grid7.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid8.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid9.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid1.disabled = true;
-        grid2.disabled = true;
-        grid3.disabled = true;
-        grid4.disabled = true;
-        grid5.disabled = true;
-        grid6.disabled = true;
+        grid[6].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[7].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[8].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[0].disabled = true;
+        grid[1].disabled = true;
+        grid[2].disabled = true;
+        grid[3].disabled = true;
+        grid[4].disabled = true;
+        grid[5].disabled = true;
         comment.innerText = "Player O won!";
         movesButton.classList.remove(hidden)
     }
     else if (board[0][0] == "O" && board[1][0] == "O" && board[2][0] == "O") {
-        grid1.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid4.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid7.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid2.disabled = true;
-        grid3.disabled = true;
-        grid5.disabled = true;
-        grid6.disabled = true;
-        grid8.disabled = true;
-        grid9.disabled = true;
+        grid[0].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[3].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[6].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[1].disabled = true;
+        grid[2].disabled = true;
+        grid[4].disabled = true;
+        grid[5].disabled = true;
+        grid[7].disabled = true;
+        grid[8].disabled = true;
         comment.innerText = "Player O won!";
         movesButton.classList.remove(hidden)
     }
     else if (board[0][1] == "O" && board[1][1] == "O" && board[2][1] == "O") {
-        grid2.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid5.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid8.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid1.disabled = true;
-        grid3.disabled = true;
-        grid4.disabled = true;
-        grid6.disabled = true;
-        grid7.disabled = true;
-        grid9.disabled = true;
+        grid[1].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[4].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[7].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[0].disabled = true;
+        grid[2].disabled = true;
+        grid[3].disabled = true;
+        grid[5].disabled = true;
+        grid[6].disabled = true;
+        grid[8].disabled = true;
         comment.innerText = "Player O won!";
         movesButton.classList.remove(hidden)
     }
     else if (board[0][2] == "O" && board[1][2] == "O" && board[2][2] == "O") {
-        grid3.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid6.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid9.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid1.disabled = true;
-        grid2.disabled = true;
-        grid4.disabled = true;
-        grid5.disabled = true;
-        grid7.disabled = true;
-        grid8.disabled = true;
+        grid[2].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[5].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[8].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[0].disabled = true;
+        grid[1].disabled = true;
+        grid[3].disabled = true;
+        grid[4].disabled = true;
+        grid[6].disabled = true;
+        grid[7].disabled = true;
         comment.innerText = "Player O won!";
         movesButton.classList.remove(hidden)
     }
     else if (board[0][0] == "O" && board[1][1] == "O" && board[2][2] == "O") {
-        grid1.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid5.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid9.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid2.disabled = true;
-        grid3.disabled = true;
-        grid4.disabled = true;
-        grid6.disabled = true;
-        grid7.disabled = true;
-        grid8.disabled = true;
+        grid[0].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[4].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[8].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[1].disabled = true;
+        grid[2].disabled = true;
+        grid[3].disabled = true;
+        grid[5].disabled = true;
+        grid[6].disabled = true;
+        grid[7].disabled = true;
         comment.innerText = "Player O won!";
         movesButton.classList.remove(hidden)
     }
     else if (board[0][2] == "O" && board[1][1] == "O" && board[2][0] == "O") {
-        grid3.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid5.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid7.style.backgroundColor = "rgba(255, 252, 102, 0.425)";
-        grid1.disabled = true;
-        grid2.disabled = true;
-        grid4.disabled = true;
-        grid6.disabled = true;
-        grid8.disabled = true;
-        grid9.disabled = true;
+        grid[2].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[4].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[6].style.backgroundColor = "rgba(255, 252, 102, 0.425)";
+        grid[0].disabled = true;
+        grid[1].disabled = true;
+        grid[3].disabled = true;
+        grid[5].disabled = true;
+        grid[7].disabled = true;
+        grid[8].disabled = true;
         comment.innerText = "Player O won!";
         movesButton.classList.remove(hidden)
     }
