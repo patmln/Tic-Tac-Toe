@@ -79,10 +79,34 @@ function play(element) {
     element.disabled = true
 }
 
+function threeXOs(array) {
+    if (array.toString.includes("X,X,X") == true) {
+        comment.innerText = "Player X won!";
+    }
+    else if (array.toString.includes("O,O,O") == true) {
+        comment.innerText = "Player O won!";
+    }
+}
+
 function result(element) {
-    var row = element.dataset.row
-    var column = element.dataset.column
-    var emptyArray = []
+    var n = board.length
+    var horizontal = []
+    var vertical = []
+    var diagonalRight = []
+    var diagonalLeft = []
+    for (var i = 0; i < n; i++) {
+        for (var j = 0; j < n; j++) {
+            horizontal.push(board[i][j]);
+            vertical.push(board[j][i]);
+            diagonalRight.push(board[j][j]);
+            diagonalLeft.push(board[j][2-j]);
+        }
+        //threeXOs(horizontal) || threeXOs(vertical) || threeXOs(diagonalRight) || threeXOs(diagonalLeft)
+    }
+    if(!board[0].includes('') && !board[1].includes('') && !board[2].includes('')) {
+        comment.innerText = "It's a draw!";
+    }
+    movesButton.classList.remove(hidden)
 }
 
 grid.forEach((element, index) => {
