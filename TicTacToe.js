@@ -1,5 +1,4 @@
-var grid = document.querySelectorAll(".grid")
-
+var grid = Array.from(document.querySelectorAll(".grid"))
 
 var board = [
     ['', '', ''],
@@ -54,200 +53,53 @@ function chooseO() {
 }
 
 //game play
-function play1() {
+function playDetails() {
     if (value == 1) {
-        board[0][0] = "X";
-        grid[0].value = board[0][0];
-        grid[0].disabled = true;
         comment.innerText = "Player O's turn."
         value = 2;
-        var board1 = JSON.parse(JSON.stringify(board));
-        gameHistory.push(board1);
     }
     else {
-        board[0][0] = "O";
-        grid[0].value = board[0][0];
-        grid[0].disabled = true;
         comment.innerText = "Player X's turn."
-        value = 1;
-        var board1 = JSON.parse(JSON.stringify(board));
-        gameHistory.push(board1);
+        value = 1; 
     }
+    var board1 = JSON.parse(JSON.stringify(board));
+    gameHistory.push(board1);
 }
 
-function play2() {
+function play(element) {
+    var row = element.dataset.row
+    var column = element.dataset.column
     if (value == 1) {
-        board[0][1] = "X";
-        grid[1].value = board[0][1];
-        grid[1].disabled = true;
-        comment.innerText = "Player O's turn."
-        value = 2;
-        var board2 = JSON.parse(JSON.stringify(board));
-        gameHistory.push(board2);
+        board[row][column] = "X"
     }
     else {
-        board[0][1] = "O";
-        grid[1].value = board[0][1];
-        grid[1].disabled = true;
-        comment.innerText = "Player X's turn."
-        value = 1;
-        var board2 = JSON.parse(JSON.stringify(board));
-        gameHistory.push(board2);
+        board[row][column] = "O"
     }
+    element.value = board[row][column]
+    element.disabled = true
 }
 
-function play3() {
-    if (value == 1) {
-        board[0][2] = "X";
-        grid[2].value = board[0][2];
-        grid[2].disabled = true;
-        comment.innerText = "Player O's turn."
-        value = 2;
-        var board3 = JSON.parse(JSON.stringify(board));
-        gameHistory.push(board3);
-    }
-    else {
-        board[0][2] = "O";
-        grid[2].value = board[0][2];
-        grid[2].disabled = true;
-        comment.innerText = "Player X's turn."
-        value = 1;
-        var board3 = JSON.parse(JSON.stringify(board));
-        gameHistory.push(board3);
-    }
+function result(element) {
+    var row = element.dataset.row
+    var column = element.dataset.column
+    var emptyArray = []
 }
 
-function play4() {
-    if (value == 1) {
-        board[1][0] = "X";
-        grid[3].value = board[1][0];
-        grid[3].disabled = true;
-        comment.innerText = "Player O's turn."
-        value = 2;
-        var board4 = JSON.parse(JSON.stringify(board));
-        gameHistory.push(board4);
-    }
-    else {
-        board[1][0] = "O";
-        grid[3].value = board[1][0];
-        grid[3].disabled = true;
-        comment.innerText = "Player X's turn."
-        value = 1;
-        var board4 = JSON.parse(JSON.stringify(board));
-        gameHistory.push(board4);
-    }
-}
-
-function play5() {
-    if (value == 1) {
-        board[1][1] = "X";
-        grid[4].value = board[1][1];
-        grid[4].disabled = true;
-        comment.innerText = "Player O's turn."
-        value = 2;
-        var board5 = JSON.parse(JSON.stringify(board));
-        gameHistory.push(board5);
-    }
-    else {
-        board[1][1] = "O";
-        grid[4].value = board[1][1];
-        grid[4].disabled = true;
-        comment.innerText = "Player X's turn."
-        value = 1;
-        var board5 = JSON.parse(JSON.stringify(board));
-        gameHistory.push(board5);
-    }
-}
-
-function play6() {
-    if (value == 1) {
-        board[1][2] = "X";
-        grid[5].value = board[1][2];
-        grid[5].disabled = true;
-        comment.innerText = "Player O's turn."
-        value = 2;
-        var board6 = JSON.parse(JSON.stringify(board));
-        gameHistory.push(board6);
-    }
-    else {
-        board[1][2] = "O";
-        grid[5].value = board[1][2];
-        grid[5].disabled = true;
-        comment.innerText = "Player X's turn."
-        value = 1;
-        var board6 = JSON.parse(JSON.stringify(board));
-        gameHistory.push(board6);
-    }
-}
-
-function play7() {
-    if (value == 1) {
-        board[2][0] = "X";
-        grid[6].value = board[2][0];
-        grid[6].disabled = true;
-        comment.innerText = "Player O's turn."
-        value = 2;
-        var board7 = JSON.parse(JSON.stringify(board));
-        gameHistory.push(board7);
-    }
-    else {
-        board[2][0] = "O";
-        grid[6].value = board[2][0];
-        grid[6].disabled = true;
-        comment.innerText = "Player X's turn."
-        value = 1;
-        var board7 = JSON.parse(JSON.stringify(board));
-        gameHistory.push(board7);
-    }
-}
-
-function play8() {
-    if (value == 1) {
-        board[2][1] = "X";
-        grid[7].value = board[2][1];
-        grid[7].disabled = true;
-        comment.innerText = "Player O's turn."
-        value = 2;
-        var board8 = JSON.parse(JSON.stringify(board));
-        gameHistory.push(board8);
-    }
-    else {
-        board[2][1] = "O";
-        grid[7].value = board[2][1];
-        grid[7].disabled = true;
-        comment.innerText = "Player X's turn."
-        value = 1;
-        var board8 = JSON.parse(JSON.stringify(board));
-        gameHistory.push(board8);
-    }
-}
-
-function play9() {
-    if (value == 1) {
-        board[2][2] = "X";
-        grid[8].value = board[2][2];
-        grid[8].disabled = true;
-        comment.innerText = "Player O's turn."
-        value = 2;
-        var board9 = JSON.parse(JSON.stringify(board));
-        gameHistory.push(board9);
-    }
-    else {
-        board[2][2] = "O";
-        grid[8].value = board[2][2];
-        grid[8].disabled = true;
-        comment.innerText = "Player X's turn."
-        value = 1;
-        var board9 = JSON.parse(JSON.stringify(board));
-        gameHistory.push(board9);
-    }
-}
+grid.forEach((element, index) => {
+    element.addEventListener("click", function() {
+        play(element)
+        playDetails()
+        result(element)
+    })
+}) 
 
 //check if x or o won or draw
 
 const movesButton = document.querySelector('#movesButton');
 const hidden = "hidden"
 
+
+/*
 function results() {
     //X is winnner
     if (board[0][0] == "X" && board[0][1] == "X" && board[0][2] == "X") {
@@ -469,7 +321,7 @@ function results() {
             movesButton.classList.remove(hidden)
     } 
 }
-
+*/
 
 //reset
 function reset() {
