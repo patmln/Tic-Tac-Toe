@@ -80,12 +80,14 @@ function play(element) {
 }
 
 function threeXOs(array) {
-    if (array.toString.includes("X,X,X") == true) {
+    var arrayString = array.toString()
+    if (arrayString.includes("X,X,X") == true) {
         comment.innerText = "Player X won!";
     }
-    else if (array.toString.includes("O,O,O") == true) {
+    else if (arrayString.includes("O,O,O") == true) {
         comment.innerText = "Player O won!";
     }
+    grid.disabled = true;
 }
 
 function result(element) {
@@ -101,12 +103,13 @@ function result(element) {
             diagonalRight.push(board[j][j]);
             diagonalLeft.push(board[j][2-j]);
         }
-        //threeXOs(horizontal) || threeXOs(vertical) || threeXOs(diagonalRight) || threeXOs(diagonalLeft)
+        (threeXOs(horizontal) || threeXOs(vertical) || threeXOs(diagonalRight) || threeXOs(diagonalLeft))
     }
     if(!board[0].includes('') && !board[1].includes('') && !board[2].includes('')) {
         comment.innerText = "It's a draw!";
     }
     movesButton.classList.remove(hidden)
+    
 }
 
 grid.forEach((element, index) => {
