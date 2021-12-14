@@ -80,14 +80,16 @@ function play(element) {
 }
 
 function threeXOs(array) {
-    var arrayString = array.toString()
-    if (arrayString.includes("X,X,X") == true) {
-        comment.innerText = "Player X won!";
+    if ((array[0] == "X" && array[1] == "X" && array[2] == "X") ||
+        (array[3] == "X" && array[4] == "X" && array[5] == "X") ||
+        (array[6] == "X" && array[7] == "X" && array[8] == "X")) {
+            comment.innerText = "Player X won!";
     }
-    else if (arrayString.includes("O,O,O") == true) {
-        comment.innerText = "Player O won!";
-    }
-    grid.disabled = true;
+    else if ((array[0] == "O" && array[1] == "O" && array[2] == "O") ||
+        (array[3] == "O" && array[4] == "O" && array[5] == "O") ||
+        (array[6] == "O" && array[7] == "O" && array[8] == "O")) {
+            comment.innerText = "Player O won!";
+    }  
 }
 
 function result(element) {
@@ -103,7 +105,7 @@ function result(element) {
             diagonalRight.push(board[j][j]);
             diagonalLeft.push(board[j][2-j]);
         }
-        (threeXOs(horizontal) || threeXOs(vertical) || threeXOs(diagonalRight) || threeXOs(diagonalLeft))
+        threeXOs(horizontal) || threeXOs(vertical) || threeXOs(diagonalRight) || threeXOs(diagonalLeft)
     }
     if(!board[0].includes('') && !board[1].includes('') && !board[2].includes('')) {
         comment.innerText = "It's a draw!";
@@ -430,3 +432,6 @@ function next() {
     }
 }
 
+//disable clicking before choosing player
+//disable clicking after winning
+//show moves history after finishing game
