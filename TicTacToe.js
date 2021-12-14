@@ -92,7 +92,7 @@ function threeXOs(array) {
     }  
 }
 
-function result(element) {
+function result() {
     var n = board.length
     var horizontal = []
     var vertical = []
